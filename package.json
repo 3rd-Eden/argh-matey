@@ -1,0 +1,34 @@
+{
+  "name": "argh-matey",
+  "version": "1.0.0",
+  "description": "Argh Matey allows you to easily find the right cli command using language processing",
+  "main": "index.js",
+  "scripts": {
+    "test:runner": "mocha test.js",
+    "test": "nyc --reporter=text --reporter=json-summary npm run test:runner"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/3rd-Eden/argh-matey.git"
+  },
+  "keywords": [
+    "argh",
+    "matey",
+    "cli",
+    "learning"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3rd-Eden/argh-matey/issues"
+  },
+  "homepage": "https://github.com/3rd-Eden/argh-matey#readme",
+  "dependencies": {
+    "soundex-code": "^1.0.4"
+  },
+  "devDependencies": {
+    "assume": "^2.2.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
+  }
+}
