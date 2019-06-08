@@ -3,7 +3,7 @@ const assume = require('assume');
 const matey = require('./');
 
 describe('argh-matey', function () {
-  const commands = ['run', 'help', 'publish', 'register', 'test'];
+  const commands = ['run', 'help', 'publish', 'register', 'test', 'status'];
 
   it('is exported as a function', function () {
     assume(matey).is.a('function');
@@ -20,7 +20,8 @@ describe('argh-matey', function () {
     { word: 'RUN', match: 'run' },
     { word: 'rum', match: 'run' },
     { word: 'tst', match: 'test' },
-    { word: 'publsh', match: 'publish' }
+    { word: 'publsh', match: 'publish' },
+    { word: 'statusg', match: 'status' },
   ].forEach(function ({ word, match }) {
     it(`matches ${word} with ${match}`, function () {
       const res = matey(commands, word);
